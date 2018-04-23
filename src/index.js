@@ -1,4 +1,3 @@
-//lodash (debounce) only runs every 300 seconds to prevent the videosearch from happening with every key
 import _ from 'lodash';
 
 import React, { Component } from "react";
@@ -12,29 +11,29 @@ import VideoDetail from './components/video_detail';
 const API_KEY = "AIzaSyAQYiNuD6trK-giyef9h6J44-uUymn-6T0";
 
 
-// Component - something that produces HTML
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       videos: [],
-      selectedVideo: null
+      selectedVideo: null,
+      term:''
     }
 
-    this.videoSearch('the wedge')
+    this.videoSearch('coding')
  
   }
 
   videoSearch(term){
-    YTSearch({key: API_KEY, term: term}, (videos) =>{
-      //destructuring (ES6) the response and saving it to videos
+    YTSearch({key: API_KEY, term: term+" ambient music"}, (videos) =>{
+ 
       this.setState({
         videos : videos,
         selectedVideo: videos[0],
+        term: term
       })
-      //same as: ---key and value must have the same name
-      // this.setState({videos: videos})
+
     });     
   }
 
@@ -44,7 +43,10 @@ class App extends Component {
       <div>
         <SearchBar
          onSearchTermChange={videoSearch} />
-        <VideoDetail video={this.state.selectedVideo}  />
+         <hr />
+         <h5 id="detail_result_title">Showing results for: "{this.state.term}"</h5>
+        <VideoDetail
+        video={this.state.selectedVideo}  />
         <VideoList 
         onVideoSelect={selectedVideo => this.setState({selectedVideo})}
         videos={this.state.videos}/>
@@ -53,5 +55,5 @@ class App extends Component {
   }
 }
 
-//  Take this component's generated HTML and put it in the DOM
+
 ReactDOM.render(<App />, document.querySelector(".container"));

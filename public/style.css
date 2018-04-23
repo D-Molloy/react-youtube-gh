@@ -1,3 +1,15 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: rgb(255, 0, 0);
+    border-color: #E7E7E7;
+}
+a#nav_title.navbar-brand {
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    font-size: 30px;
+    margin-left: 2%;
+    padding: 0 10px;
+    border: 1px solid white;
+}
 .search-bar {
     margin: 20px;
     text-align: center;
@@ -23,5 +35,40 @@
 }
 
 .list-group-item:hover {
-    background-color: #eee;
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+/* font-family: 'Dosis', sans-serif; */
+/* font-family: 'Raleway', sans-serif; */
+
+
+
+input#search_input{
+    margin-top: 10px;
+}
+
+
+h5#search_title,
+#detail_descrip,
+#title_sub {
+    font-family: 'Raleway', sans-serif;
+}
+
+span#search_input_title {
+    font-family: 'Raleway', sans-serif;
+}
+
+h5#detail_result_title{
+    font-family: 'Raleway', sans-serif;
+    margin-left: 14px;
+}
+
+#detail_title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#detail_descrip{
+    font-size: 17px;
 }

@@ -1,9 +1,7 @@
 import React from "react";
 
-// destructure the props.video and save them to video
 const VideoListItem = ({ video, onVideoSelect }) => {
-  // dont need below because we destructed props
-  // const video = props.video;
+
   const imageUrl = video.snippet.thumbnails.default.url;
 
   return (
