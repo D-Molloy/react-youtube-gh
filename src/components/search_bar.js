@@ -20,7 +20,7 @@ class SearchBar extends Component {
         <span id="search_input_title">Topic: </span>
         <input
           id="search_input"
-          placeholder="e.g. Spa, Acoustic, Sleep, Phish"
+          placeholder="e.g. Spa, Acoustic, Sleep, Studying"
           value={this.state.term}
           onChange={event => this.onInputChange(event.target.value)}
         />
