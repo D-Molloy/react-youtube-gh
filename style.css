@@ -6,6 +6,7 @@ a#nav_title.navbar-brand {
     font-family: 'Dosis', sans-serif;
     color: white;
     font-size: 30px;
+    margin-left: 2%;
     padding: 0 10px;
     border: 1px solid white;
 }
